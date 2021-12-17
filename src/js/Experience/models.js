@@ -8,35 +8,81 @@ import { materialBackground } from "./background"
 import { pointLight1 } from "./light"
 import { materialPoint } from "./points"
 
+const counterLoading = document.querySelector(".counterLoading")
+const loader = document.querySelector(".loader")
+const loaderbtn = document.querySelector(".loader-btn")
+
+const music = new Audio("music/ambiance.mp3")
+music.volume = 0.025
+
 export let model = null
 export let loadingManager = new THREE.LoadingManager(
     () => {
-        console.log("Loaded")
-
-        // --- Apparition animation ---
-        
-        // Rotation
-        gsap.from(model.rotation, {
-            y: - Math.PI * 0.5,
-            duration: 1,
+        gsap.to(counterLoading, {
+            opacity: 0,
+            duration: 0.5,
             ease: Power1.easeOut
         })
 
-        // Position
-        gsap.from(model.position, {
-            y: - 1,
-            x: - 0.5,
-            duration: 1,
+        loaderbtn.style.display = "block"
+
+        gsap.to(loaderbtn, {
+            opacity: 1,
+            duration: 0.5,
+            delay: 0.5,
             ease: Power1.easeOut
         })
-
-        changeLoad()
-
+    
+        loaderbtn.addEventListener("click", () => startExperience())
     },
-    () => {
-        console.log("Loading...")
+    (itemUrl, itemsLoaded, itemsTotal) => {
+        const progressRatio = itemsLoaded / itemsTotal
+
+        counterLoading.innerHTML = `Loading... ${(progressRatio * 100).toFixed(0)}%`
     }
 )
+
+const startExperience = () => {
+    music.play()
+
+    gsap.to(loader, {
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.5,
+        ease: Power1.easeOut
+    })
+
+    gsap.to(loaderbtn, {
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.5,
+        ease: Power1.easeOut
+    })
+
+    setTimeout(() => {
+        loader.style.display = "none"
+        loaderbtn.style.display = "none"
+    }, 1000);
+
+    // --- Apparition animation ---
+    
+    // Rotation
+    gsap.from(model.rotation, {
+        y: - Math.PI * 0.5,
+        duration: 1,
+        ease: Power1.easeOut
+    })
+
+    // Position
+    gsap.from(model.position, {
+        y: - 1,
+        x: - 0.5,
+        duration: 1,
+        ease: Power1.easeOut
+    })
+
+    changeLoad()
+}
 
 // Download model
 export const initModel = () => {
