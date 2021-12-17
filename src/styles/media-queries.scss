@@ -93,6 +93,12 @@
             }
         }
     }
+
+    .loader {
+        p {
+            font-size: 45px!important;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -165,6 +171,12 @@
             img {
                 width: 300px!important;
             }
+        }
+    }
+
+    .loader {
+        p {
+            font-size: 35px!important;
         }
     }
 }
