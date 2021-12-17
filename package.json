@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "deploy": "gh-pages -d dist"
+    "build": "parcel build src/index.html --no-minify"
   },
   "staticFiles": {
     "staticPath": "public",
