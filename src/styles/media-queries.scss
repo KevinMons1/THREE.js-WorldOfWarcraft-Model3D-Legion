@@ -1,0 +1,170 @@
+@media screen and (max-width: 1024px) {
+    .section4 {
+        .sectionOther {
+            margin-right: 25px;
+            img {
+                width: 450px!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .section2 {
+        p {
+            font-size: 17px!important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section2 {
+        align-items: center;
+
+        .sectionOther {
+            width: 75%!important;
+        }
+
+    }
+
+    .section3 {
+        h3 {
+            font-size: 100px!important;
+        }
+
+        .section3-text1 {
+            font-size: 30px!important;
+        }
+
+        .section3-text2 {
+            font-size: 25px!important;
+        }
+    }
+
+    .section4 {
+        .sectionOther {
+            margin-right: 50px;
+            img {
+                width: 450px!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .section1 {
+        h1 {
+            font-size: 150px;
+        }
+
+        h2 {
+            font-size: 35px!important;
+        }
+    }
+
+    .section2 {
+        .sectionOther {
+            width: 90%!important;
+        }
+    }
+
+    .section3 {
+        h3 {
+            font-size: 75px!important;
+        }
+
+        .section3-text1 {
+            font-size: 25px!important;
+        }
+
+        .section3-text2 {
+            font-size: 22px!important;
+        }
+    }
+
+    .section4 {
+        .sectionOther {
+            width: 100%;
+            align-items: center;
+            margin-right: 0;
+
+            img {
+                width: 450px!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section1 {
+        h1 {
+            font-size: 100px;
+        }
+
+        h2 {
+            font-size: 25px!important;
+        }
+    }
+
+    .section2 {
+        p {
+            font-size: 15px!important;
+        }
+    }
+
+    .section3 {
+        h3 {
+            font-size: 45px!important;
+        }
+
+        .section3-text1 {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .section3-text2 {
+            text-align: center;
+        }
+    }
+
+    .section4 {
+        .sectionOther {
+            a {
+                width: 150px;
+                height: 30px;
+                
+                span {
+                    font-size: 18px!important;
+                }
+            }
+
+            img {
+                width: 350px!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .section1 {
+        h1 {
+            font-size: 85px;
+        }
+
+        h2 {
+            font-size: 20px!important;
+        }
+    }
+
+    .section4 {
+        .sectionOther {
+            a {
+                margin-top: 10px;
+            }
+
+            img {
+                width: 300px!important;
+            }
+        }
+    }
+}

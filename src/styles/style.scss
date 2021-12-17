@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./main.scss";
+@import "./media-queries.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, p, span, a {
+    color: #fff;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+

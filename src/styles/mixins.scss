@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'LifeCraft';
+    src: url("../assets/LifeCraft_Font.ttf") format('truetype');
+}
+
+@mixin btnStyle {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+    
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-family: $fontFam;
+        z-index: 2;
+    }
+
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::before {
+        border-image-source: url("../assets/btn2.png");
+        background-repeat: no-repeat;
+        border-image-outset: 17px 16px 18px 19px;
+        border-image-width: 17px;
+        border-image-slice: 17 fill;
+        z-index: 1;
+    }
+
+    &::after {
+        border-image-source: url("../assets/btn4.png");
+        background-repeat: round;
+        border-image-outset: 17px 16px 18px 19px;
+        border-image-width: 17px;
+        border-image-slice: 17 fill;
+        z-index: 2;
+    }
+}
