@@ -1,9 +1,15 @@
 # World Of Warcraft model 3d 
 
-this project is simply because I have just a model 3d modified (in post-processing) and try to integrate a design such [worldofwarcraft](https://worldofwarcraft.com/fr-fr/ "worldofwarcraft") website.
+I wanted to work with a model so I choiced [World Of Warcraft](https://worldofwarcraft.com/) as theme 🗡🏹
 
-`use npm install and npm start`
+[This project is here](https://world-of-warcraft-3d.vercel.app/)
 
-Just **THREE.js**, **GSAP** and **vanilla javascript**
+## Technologies
 
-[Project](https://world-of-warcraft-3d.vercel.app/)
+```bash
+Three.js 😁
+```
+## Me
+
+Hello, I am Kévin Monsieur. I am a Belgian frontend developer.
+I give you my [LinkeIn](https://www.linkedin.com/in/k%C3%A9vin-monsieur-a9134a181/) if you want to know me more.
